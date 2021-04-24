@@ -13,7 +13,37 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div class="container">
+      <div class="wrapper">
+        <div class="head">
+          <h1>Weather Application</h1>
+          <form class="search-form" id="search">
+            <input type="text" placeholder="City Name" />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+        <h2>New York</h2>
+        <div class="row">
+          <div class="col-6">
+            <p class="temperature" id="temperaturemain">
+              6 <span class="unit">°C | °F</span>
+            </p>
+            <p class="weather-icon" id="weathericon">
+              <img src="src/media/sunny.png" alt="weather icon" />
+            </p>
+            <p class="weathercondition" id="condition">Clear sky</p>
+          </div>
+          <div class="col-6">
+            <p class="weatherstats" id="humidity">Humidity: <span>86%</span></p>
+            <p class="weatherstats" id="wind">Wind: <span>2 km/h</span></p>
+            <p class="weatherstats" id="precipitation">
+              Precipitation: <span>87</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="src/src.js"></script>
   </body>
 </html>
