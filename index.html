@@ -18,30 +18,46 @@
         <div class="head">
           <h1>Weather Application</h1>
           <form class="search-form" id="search">
-            <input type="text" placeholder="City Name" />
-            <input type="submit" value="Search" />
+            <input class="inputfield" type="text" placeholder="City Name" />
+            <input class="submitbutton" type="submit" value="Search" />
           </form>
         </div>
         <h2>New York</h2>
         <div class="row">
-          <div class="col-6">
-            <p class="temperature" id="temperaturemain">
-              6 <span class="unit">°C | °F</span>
-            </p>
-            <p class="weather-icon" id="weathericon">
-              <img src="src/media/sunny.png" alt="weather icon" />
-            </p>
-            <p class="weathercondition" id="condition">Clear sky</p>
+          <div class="col-8">
+            <ul>
+              <li>Friday 23:48</li>
+              <li>Clear sky</li>
+            </ul>
+            <img
+              class="weathericon"
+              id="weathericon"
+              src="src/media/sunny.png"
+              alt="weather icon"
+            />
+            <span class="displaytemperature" id="displaytemp">6</span>
+            <span class="unit">°C | °F</span>
           </div>
-          <div class="col-6">
-            <p class="weatherstats" id="humidity">Humidity: <span>86%</span></p>
-            <p class="weatherstats" id="wind">Wind: <span>2 km/h</span></p>
-            <p class="weatherstats" id="precipitation">
-              Precipitation: <span>87</span>
-            </p>
+          <div class="col-4">
+            <ul>
+              <li class="weatherstats" id="humidity">
+                Humidity: <span>86%</span>
+              </li>
+              <li class="weatherstats" id="wind">Wind: <span>2 km/h</span></li>
+              <li class="weatherstats" id="precipitation">
+                Precipitation: <span>87</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
+      <small>
+        Coded by Elisa Utterodt<a
+          href="https://github.com/eutterodt/WetterApplikation.git"
+          aria-label="link to github"
+          >View open source code on github</a
+        >
+      </small>
     </div>
 
     <script src="src/src.js"></script>

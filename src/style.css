@@ -1,1 +1,69 @@
+.container {
+  margin: 0 auto;
+}
+.wrapper {
+  margin-top: 20px;
+  max-width: 600px;
+  border: solid 1px cadetblue;
+  border-radius: 3.5px;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.head {
+  background-color: cadetblue;
+  padding: 15px;
+}
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+.search-form {
+  text-align: center;
+}
+.submitbutton {
+  background-color: #fff;
+  color: cadetblue;
+  border: 1px solid cadetblue;
+  border-radius: 4px;
+  padding: 4px 7px;
+}
 
+input[type="text"] {
+  width: 70%;
+  padding: 4px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+h2 {
+  padding-left: 10px;
+  margin-top: 10px;
+  color: cadetblue;
+  font-weight: 600;
+}
+
+ul {
+  padding: 0px 10px;
+  list-style: none;
+  font-size: 14px;
+}
+
+.col-8 {
+  line-height: 1;
+}
+
+img {
+  width: 40px;
+  height: auto;
+  vertical-align: baseline;
+}
+.displaytemperature {
+  font-size: 30px;
+  font-weight: 600;
+  vertical-align: top;
+}
+.unit {
+  font-size: 12px;
+  vertical-align: top;
+}
