@@ -17,7 +17,10 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#displaytemp").innerHTML = Math.round(
+  document.querySelector("#weather-condition").innerHTML = response.data.weather[0].description;
+  document.querySelector("#weathericon").setAttribute( "src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#weathericon").setAttribute("alt",response.data.weather[0].description );
+ document.querySelector("#displaytemp").innerHTML = Math.round(
     response.data.main.temp
   );
 }
