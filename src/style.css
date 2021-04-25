@@ -1,5 +1,6 @@
-.container {
+.outer-wrapper {
   margin: 0 auto;
+  width: 50%;
 }
 .wrapper {
   margin-top: 20px;
@@ -58,14 +59,15 @@ li::first-letter {
 }
 
 img {
-  width: 50px;
+  width: 60px;
   height: auto;
   vertical-align: middle;
 }
 
 .displaytemperature {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 40px;
+  color: cadetblue;
+  font-weight: 400;
   vertical-align: middle;
 }
 .unit {

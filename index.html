@@ -15,60 +15,65 @@
   </head>
   <body>
     <div class="container">
-      <div class="wrapper">
-        <div class="head">
-          <h1>Weather Application</h1>
-          <form class="search-form" id="search">
-            <input
-              class="inputfield"
-              id="city-search-input"
-              type="text"
-              placeholder="City Name"
-            />
-            <input
-              class="submitbutton"
-              id="submit"
-              type="submit"
-              value="Search"
-            />
-          </form>
-        </div>
-        <h2 id="searched-city">New York</h2>
-        <div class="row">
-          <div class="col-8">
-            <ul>
-              <li id="current-date"></li>
-              <li id="current-time"></li>
-              <li id="weather-condition">Clear sky</li>
-            </ul>
-            <img class="weathericon" id="weathericon" src="#" alt="" />
-            <span class="displaytemperature" id="displaytemp">6</span>
-            <span class="unit"
-              ><a class="unit-link-active" id="tempcelsius" href="#">°C</a> |
-              <a class="unit-link-active" id="tempfahrenheit" href="#"
-                >°F</a
-              ></span
-            >
+      <div class="outer-wrapper">
+        <div class="wrapper">
+          <div class="head">
+            <h1>Weather Application</h1>
+            <form class="search-form" id="search">
+              <input
+                class="inputfield"
+                id="city-search-input"
+                type="text"
+                placeholder="City Name"
+              />
+              <input
+                class="submitbutton"
+                id="submit"
+                type="submit"
+                value="Search"
+              />
+            </form>
           </div>
-          <div class="col-4">
-            <ul>
-              <li class="weatherstats">
-                Humidity: <span id="humidity">86</span>%
-              </li>
-              <li class="weatherstats">Wind: <span id="wind">2</span> km/h</li>
-            </ul>
+          <h2 id="searched-city">New York</h2>
+          <div class="row">
+            <div class="col-8">
+              <ul>
+                <li id="current-date"></li>
+                <li id="current-time"></li>
+                <li id="weather-condition">Clear sky</li>
+              </ul>
+              <img class="weathericon" id="weathericon" src="#" alt="" />
+              <span class="displaytemperature" id="displaytemp">6</span>
+              <span class="unit"
+                ><a class="unit-link-active" id="tempcelsius" href="#">°C</a> |
+                <a class="unit-link-active" id="tempfahrenheit" href="#"
+                  >°F</a
+                ></span
+              >
+            </div>
+            <div class="col-4">
+              <ul>
+                <li class="weatherstats">
+                  Humidity: <span id="humidity">86</span>%
+                </li>
+                <li class="weatherstats">
+                  Wind: <span id="wind">2</span> km/h
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <small>
+          Coded by Elisa Utterodt
+          <a
+            class="github-link"
+            href="https://github.com/eutterodt/WetterApplikation.git"
+            target="blank"
+            aria-label="link to github"
+            >view open source code on github</a
+          >
+        </small>
       </div>
-      <small>
-        Coded by Elisa Utterodt
-        <a
-          class="github-link"
-          href="https://github.com/eutterodt/WetterApplikation.git"
-          aria-label="link to github"
-          >view open source code on github</a
-        >
-      </small>
     </div>
 
     <script src="src/src.js"></script>
