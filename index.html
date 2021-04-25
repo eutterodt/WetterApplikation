@@ -37,12 +37,18 @@
         <div class="row">
           <div class="col-8">
             <ul>
-              <li id="current-time">Friday 23:48</li>
+              <li id="current-date"></li>
+              <li id="current-time"></li>
               <li id="weather-condition">Clear sky</li>
             </ul>
             <img class="weathericon" id="weathericon" src="#" alt="" />
             <span class="displaytemperature" id="displaytemp">6</span>
-            <span class="unit">°C | °F</span>
+            <span class="unit"
+              ><a class="unit-link-active" id="tempcelsius" href="#">°C</a> |
+              <a class="unit-link-active" id="tempfahrenheit" href="#"
+                >°F</a
+              ></span
+            >
           </div>
           <div class="col-4">
             <ul>
@@ -55,10 +61,12 @@
         </div>
       </div>
       <small>
-        Coded by Elisa Utterodt<a
+        Coded by Elisa Utterodt
+        <a
+          class="github-link"
           href="https://github.com/eutterodt/WetterApplikation.git"
           aria-label="link to github"
-          >View open source code on github</a
+          >view open source code on github</a
         >
       </small>
     </div>

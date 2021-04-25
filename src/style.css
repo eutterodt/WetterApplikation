@@ -62,6 +62,7 @@ img {
   height: auto;
   vertical-align: middle;
 }
+
 .displaytemperature {
   font-size: 30px;
   font-weight: 600;
@@ -70,4 +71,22 @@ img {
 .unit {
   font-size: 12px;
   vertical-align: top;
+}
+
+.unit-link-active {
+  text-decoration: none;
+  cursor: default;
+  color: black;
+}
+.unit-link-active:hover {
+  color: cadetblue;
+}
+
+.github-link {
+  color: cadetblue;
+  text-decoration: none;
+}
+.github-link:hover {
+  color: cadetblue;
+  text-decoration: underline;
 }

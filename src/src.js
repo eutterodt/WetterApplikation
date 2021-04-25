@@ -23,13 +23,53 @@ function showTemp(response) {
  document.querySelector("#displaytemp").innerHTML = Math.round(
     response.data.main.temp
   );
+
+  celsiusTemperature = response.data.main.temp;
 }
+function showTemperatureInFahrenheit(event) {
+event.preventDefault();
+celsiusLink.classList.remove("unit-link-active");
+fahrenheitLink.classList.add("unit-link-active");
+let fahrenheitTemp = ( celsiusTemperature*9/5) + 32;
+let displayedTemp = document.querySelector("#displaytemp");
+displayedTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showTemperatureInCelsius(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("unit-link-active");
+  celsiusLink.classList.add("unit-link-active");
+  document.querySelector("#displaytemp").innerHTML= Math.round(celsiusTemperature);
+
+}
+let celsiusTemperature = null;
+let celsiusLink = document.querySelector("#tempcelsius");
+let fahrenheitLink = document.querySelector("#tempfahrenheit");
+
+document.querySelector("#tempfahrenheit").addEventListener("click", showTemperatureInFahrenheit);
+document.querySelector("#tempcelsius").addEventListener("click", showTemperatureInCelsius);
+
 
 let newCity = document.querySelector("#submit");
 newCity.addEventListener("click", handleSubmit);
 
 let Time = new Date();
 let date = Time.getDate();
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+let month = months[Time.getMonth()];
 let days = [
   "Sunday",
   "Monday",
@@ -41,6 +81,14 @@ let days = [
 ];
 let day = days[Time.getDay()];
 let hours = Time.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
 let minutes = Time.getMinutes();
-document.querySelector("#current-time").innerHTML = `${day}, ${hours}:${minutes}`;
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+document.querySelector("#current-date").innerHTML = `${day}, ${month} ${date}`;
+document.querySelector("#current-time").innerHTML = `${hours}:${minutes}`;
+
 search("Berlin");
