@@ -13,13 +13,11 @@ function handleSubmit(event) {
 }
 
 function getforecast(coordinates) {
-console.log(coordinates);
 let apiKey = "ddf91e7f98ae542cfe124eef0bb0b9fb";
 let apiEndpoint="https://api.openweathermap.org/data/2.5/onecall?";
 let exclude ="hourly,minutely,current,alerts"
 let unit = "metric";
 let apiURL =`${apiEndpoint}lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=${exclude}&units=${unit}&appid=${apiKey}`;
-console.log(apiURL);
 axios.get(apiURL).then(displayForecast);
 }
 function showTemp(response) {
