@@ -40,22 +40,6 @@ function showTemp(response) {
 
 }
 
-function showTemperatureInFahrenheit(event) {
-event.preventDefault();
-celsiusLink.classList.remove("unit-link-active");
-fahrenheitLink.classList.add("unit-link-active");
-let fahrenheitTemp = ( celsiusTemperature*9/5) + 32;
-let displayedTemp = document.querySelector("#displaytemp");
-displayedTemp.innerHTML = Math.round(fahrenheitTemp);
-}
-
-function showTemperatureInCelsius(event) {
-  event.preventDefault();
-  fahrenheitLink.classList.remove("unit-link-active");
-  celsiusLink.classList.add("unit-link-active");
-  document.querySelector("#displaytemp").innerHTML= Math.round(celsiusTemperature);
-
-}
 
 function formatDay(timestamp) {
   let date = new Date(timestamp* 1000);
@@ -101,10 +85,6 @@ forecastHTML =  forecastHTML + `
 }
 let celsiusTemperature = null;
 let celsiusLink = document.querySelector("#tempcelsius");
-let fahrenheitLink = document.querySelector("#tempfahrenheit");
-
-document.querySelector("#tempfahrenheit").addEventListener("click", showTemperatureInFahrenheit);
-document.querySelector("#tempcelsius").addEventListener("click", showTemperatureInCelsius);
 
 
 let newCity = document.querySelector("#submit");
