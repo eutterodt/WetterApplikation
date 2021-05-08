@@ -84,6 +84,37 @@ img {
   color: cadetblue;
 }
 
+.forecast {
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.col-2 {
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.col-2:hover {
+  border: solid 1px gray;
+  border-radius: 2.5px;
+}
+
+.day-forecast {
+  font-weight: 600;
+  color: gray;
+  margin: 0;
+}
+
+.forecast-icon {
+  width: 40px;
+  margin: 5px 0;
+}
+
+.forecasttemp {
+  color: gray;
+}
+
 .github-link {
   color: cadetblue;
   text-decoration: none;
