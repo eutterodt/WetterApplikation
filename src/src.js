@@ -57,27 +57,45 @@ function showTemperatureInCelsius(event) {
 
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp* 1000);
+  let day = date.getDay();
+
+  let days = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+ let  forecastDaily = response.data.daily;
   let forecastElement = document.querySelector(`#weather-forecast`);
   
 let forecastHTML = `<div class="row">`;
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
-days.forEach(function(day){
+forecastDaily.forEach(function(forecastDay, index){
+  if (index < 6) {
 forecastHTML =  forecastHTML + `
               <div class="col-2">
-                <p class="day-forecast">${day}</p>
+                <p class="day-forecast">${formatDay(forecastDay.dt)}</p>
                 <img
                   class="forecast-icon"
-                  src="/Users/Elisa/Desktop/SheCodes/SheCodes-Plus-Week7/WetterApplikation/src/media/cloud.png"
+                  src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                   alt="weather-icon"
                 />
                 <p class="forecasttemp">
-                  <span class="tempmin">12</span>°
-                  <span class="tempmax">20</span>°
+                  <span class="tempmin">${Math.round(forecastDay.temp.min)}</span>°
+                  <span class="tempmax">${Math.round(forecastDay.temp.max)}</span>°
                 </p>
               </div>`;
-})
+  }
+});
             forecastHTML=  forecastHTML +`</div>`;
             forecastElement.innerHTML = forecastHTML;
 }
@@ -127,6 +145,8 @@ let minutes = Time.getMinutes();
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+
+
 document.querySelector("#current-date").innerHTML = `${day}, ${month} ${date}`;
 document.querySelector("#current-time").innerHTML = `${hours}:${minutes}`;
 
