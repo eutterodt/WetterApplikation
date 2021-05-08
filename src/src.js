@@ -42,6 +42,30 @@ function showTemperatureInCelsius(event) {
   document.querySelector("#displaytemp").innerHTML= Math.round(celsiusTemperature);
 
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector(`#weather-forecast`);
+  
+let forecastHTML = `<div class="row">`;
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+days.forEach(function(day){
+forecastHTML =  forecastHTML + `
+              <div class="col-2">
+                <p class="day-forecast">${day}</p>
+                <img
+                  class="forecast-icon"
+                  src="/Users/Elisa/Desktop/SheCodes/SheCodes-Plus-Week7/WetterApplikation/src/media/cloud.png"
+                  alt="weather-icon"
+                />
+                <p class="forecasttemp">
+                  <span class="tempmin">12</span>°
+                  <span class="tempmax">20</span>°
+                </p>
+              </div>`;
+})
+            forecastHTML=  forecastHTML +`</div>`;
+            forecastElement.innerHTML = forecastHTML;
+}
 let celsiusTemperature = null;
 let celsiusLink = document.querySelector("#tempcelsius");
 let fahrenheitLink = document.querySelector("#tempfahrenheit");
@@ -92,3 +116,4 @@ document.querySelector("#current-date").innerHTML = `${day}, ${month} ${date}`;
 document.querySelector("#current-time").innerHTML = `${hours}:${minutes}`;
 
 search("Berlin");
+displayForecast();

@@ -90,16 +90,6 @@ img {
   font-size: 14px;
 }
 
-.col-2 {
-  margin-left: 10px;
-  margin-bottom: 20px;
-}
-
-.col-2:hover {
-  border: solid 1px gray;
-  border-radius: 2.5px;
-}
-
 .day-forecast {
   font-weight: 600;
   color: gray;
